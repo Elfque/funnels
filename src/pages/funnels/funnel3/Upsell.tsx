@@ -1,11 +1,11 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import Facilities from "./components/Facilities";
 import Gallery from "./components/Gallery";
-import Testimonial from "./components/Testimonial";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { Link } from "react-router-dom";
+import Testimonials from "./components/Testimonials";
 
 const Funnel3Upsell = () => {
   const checke = [
@@ -19,7 +19,7 @@ const Funnel3Upsell = () => {
     <div>
       <Navbar />
       <header className="bg-[url(https://cffunnelstemplates.com/demo/trip-reservation/assets/img/trip-res-banner.jpg)] h-[60vh]">
-        <div className="flex items-center w-full mx-auto h-full text-white text-center">
+        <div className="flex items-center w-full mx-auto h-full text-white text-center px-4">
           <div className="w-full py-6">
             <div className="text-6xl font-semibold mb-4">
               WAIT! YOUR ORDER IS NOT YET COMPLETE
@@ -78,7 +78,7 @@ const Funnel3Upsell = () => {
         </div>
 
         <div className="text-center mt-8">
-          <div className="text-4xl">
+          <div className="text-2xl md:text-4xl px-4">
             Offer Starting From <span className="line-through">$350</span>{" "}
             <span className="text-orangee">$150</span>
           </div>
@@ -94,7 +94,7 @@ const Funnel3Upsell = () => {
 
       <Facilities />
       <Gallery />
-      <Testimonial />
+      <Testimonials />
       <FAQ />
       <Footer />
     </div>

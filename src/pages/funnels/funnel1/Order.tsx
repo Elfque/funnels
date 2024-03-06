@@ -23,7 +23,7 @@ const Order = () => {
 
       <form
         action=""
-        className="w-[90%] max-w-md mx-auto my-20 p-3 bg-gray-200 rounded-lg"
+        className="w-[90%] max-w-2xl mx-auto my-20 p-3 bg-gray-200 rounded-lg grid sm:grid-cols-2 gap-2"
       >
         <EditInput name="" label="First Name" />
         <EditInput name="" label="Last Name" />
@@ -32,6 +32,7 @@ const Order = () => {
         <EditInput name="" label="Address" />
         <EditInput name="" label="State" />
         <EditInput name="" label="City" />
+        <EditInput name="" label="Zip Code" />
 
         {/* CARD DETAILS */}
         <div className="relative">
@@ -39,14 +40,14 @@ const Order = () => {
             type={"text"}
             name="year"
             placeholder={"Valid Card Number"}
-            className="block w-full rounded-md py-2 px-4 outline-none text bg-white border border-gray-500 mt-2"
+            className="block w-full rounded-md py-2 px-4 outline-none text bg-white border border-gray-500 mt-4"
             maxLength={16}
             required
           />
           <img
             src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/cards.png"
             alt=""
-            className="w-3/12 absolute top-3 right-2"
+            className="w-3/12 absolute top-1/2 right-2"
           />
         </div>
 
@@ -54,7 +55,7 @@ const Order = () => {
           <select
             name=""
             id=""
-            className="border rounded-md border-black p-2 h-fit w-full mt-1"
+            className="border rounded-md border-black p-2 h-fit w-full mt-2"
           >
             <option value="0">Months</option>
             <option value="1">January</option>
@@ -94,7 +95,7 @@ const Order = () => {
           />
         </div>
 
-        <div className="text-center">
+        <div className="text-center sm:col-span-2">
           <button className="bg-blue-500 rounded-md text-white font-semibold text-2xl p-3 mt-6">
             Complete Your Order
           </button>

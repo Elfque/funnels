@@ -7,7 +7,7 @@ const Funnel3Order = () => {
     <div>
       <Navbar />
       <header className="bg-[url(https://cffunnelstemplates.com/demo/trip-reservation/assets/img/trip-res-banner.jpg)] h-[60vh]">
-        <div className="flex items-center w-full mx-auto h-full text-white text-center">
+        <div className="flex items-center w-full mx-auto h-full text-white text-center px-4">
           <div className="w-full py-6">
             <div className="text-6xl font-semibold mb-4">CLAIM YOUR OFFER!</div>
 
@@ -22,7 +22,7 @@ const Funnel3Order = () => {
 
       <form
         action=""
-        className="w-[90%] max-w-2xl mx-auto my-20 p-3 bg-gray-200 rounded-lg grid grid-cols-2 gap-2"
+        className="w-[90%] max-w-2xl mx-auto my-20 p-3 bg-gray-200 rounded-lg grid sm:grid-cols-2 gap-2"
       >
         <EditInput name="" label="First Name" />
         <EditInput name="" label="Last Name" />
@@ -94,7 +94,7 @@ const Funnel3Order = () => {
           />
         </div>
 
-        <div className="text-center md:col-span-2">
+        <div className="text-center sm:col-span-2">
           <button className="bg-blue-500 rounded-md text-white font-semibold text-2xl p-3 mt-6">
             Complete Your Order
           </button>

@@ -34,19 +34,22 @@ const Funnel2Optin = () => {
       <Navbar />
 
       {/* header */}
-      <header className="bg-funnel2Banner h-[90vh]">
-        <div className="grid grid-cols-10 w-5/6 mx-auto items-center">
-          <div className="col-span-6">
+      <header className="bg-funnel2Banner h-fit bg-cover md:h-[90vh] py-4">
+        <div className="grid md:grid-cols-10 w-5/6 mx-auto items-center">
+          <div className="col-span-6 text-center md:text-start">
             <div className="text-blue-500 text-lg font-semibold">
               Filter Efficiency Above 99%
             </div>
-            <div className="text-6xl text-blue-950 font-bold">
+            <div className="text-2xl md:text-4xl lg:text-6xl text-blue-950 font-bold">
               Order Your N95 Mask! Up To70% Off Today
             </div>
 
             <div className="my-4">
               {checke.map((item: string, idx: number) => (
-                <div className="flex gap-2 items-center my-2" key={idx}>
+                <div
+                  className="flex gap-2 items-center my-2 justify-center md:justify-start"
+                  key={idx}
+                >
                   <GiCheckMark className="text-blue-500" />
                   <div>{item}</div>
                 </div>
@@ -56,17 +59,17 @@ const Funnel2Optin = () => {
             <button className="funnel2-blue-button">
               Get Your N95 Mask Now
             </button>
-            <img src={card} alt="" className="w-60 mt-4" />
+            <img src={card} alt="" className="w-60 mt-4 mx-auto md:mx-0" />
           </div>
           <div className="col-span-4">
-            <img src={mask1} alt="" />
+            <img src={mask1} alt="" className="mx-auto" />
           </div>
         </div>
       </header>
 
-      <div className="bg-blue-950 py-6 h-40">
+      <div className="bg-blue-950 py-6 h-fit px-6">
         <div className="text-center text-white mb-4">As Seen:</div>
-        <div className="flex justify-around items-center">
+        <div className="flex justify-around items-center flex-wrap gap-8">
           <img
             src="https://cffunnelstemplates.com/demo/n-95-mask/assets/icons/icon-1.png"
             alt=""
@@ -90,19 +93,19 @@ const Funnel2Optin = () => {
         </div>
       </div>
 
-      <div className="text-center text-5xl">
+      <div className="text-center text-2xl tmd:ext-5xl">
         <div className="text-blue-500 italic mb-2">Protective N95 Mask</div>
         <div className="text-blue-950 font-bold">
           Take Care of You And Your Family
         </div>
       </div>
 
-      <div className="grid grid-cols-2 w-5/6 mx-auto items-center gap-8 my-10">
+      <div className="grid md:grid-cols-2 w-5/6 mx-auto items-center gap-8 my-10">
         <img
           src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/mask-women.png"
           alt=""
         />
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid sm:grid-cols-2 gap-10">
           <Sing />
           <Sing />
           <Sing />
@@ -111,7 +114,7 @@ const Funnel2Optin = () => {
       </div>
 
       <div className="bg-funnel2Banner py-4">
-        <div className="text-center text-5xl mb-8">
+        <div className="text-center text-2xl tmd:ext-5xl mb-8">
           <div className="text-blue-500 italic mb-2">
             Introducing The Protective N95 Mask
           </div>
@@ -119,9 +122,9 @@ const Funnel2Optin = () => {
             The #1 Rated Protective N95 Mask
           </div>
         </div>
-        <div className="grid grid-cols-2 w-5/6 mx-auto items-center">
-          <div className="">
-            <div className="text-xl">
+        <div className="grid md:grid-cols-2 w-5/6 mx-auto items-center">
+          <div className="text-center md:text-start ">
+            <div className="md:text-xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum blandit metus quis magna luctus bibendum. Morbi lorem
               augue, vulputate dictum diam vitae, venenatis facilisis turpis.
@@ -129,7 +132,7 @@ const Funnel2Optin = () => {
               turpis sed ipsum aliquam varius. Aenean non tincidunt urna. Sed at
               tristique eros.
             </div>
-            <div className="text-xl">
+            <div className="md:text-xl">
               Cras varius volutpat justo, id laoreet nunc vestibulum amet. Sed
               quis sodales felis. Proin viverra vulputate bibendum. Pellentesque
               egestas, leo ac interdum facilisis.
@@ -137,7 +140,10 @@ const Funnel2Optin = () => {
 
             <div className="my-4">
               {checke.map((item: string, idx: number) => (
-                <div className="flex gap-2 items-center my-2" key={idx}>
+                <div
+                  className="flex gap-2 items-center my-2 justify-center md:justify-start"
+                  key={idx}
+                >
                   <GiCheckMark className="text-blue-500" />
                   <div>{item}</div>
                 </div>
@@ -159,7 +165,7 @@ const Funnel2Optin = () => {
       </div>
 
       <div className="bg-[url(https://cffunnelstemplates.com/demo/n-95-mask/assets/images/banner-guarantee.jpg)] py-10">
-        <div className="grid grid-cols-2 text-white w-5/6 mx-auto text-center gap-10">
+        <div className="grid md:grid-cols-2 text-white w-5/6 mx-auto text-center gap-10">
           <div className="border border-white p-10">
             <img
               src="https://cffunnelstemplates.com/demo/n-95-mask/assets/icons/icon-10.png"
@@ -198,7 +204,7 @@ const Funnel2Optin = () => {
         </div>
       </div>
 
-      <div className="text-center text-5xl mb-8">
+      <div className="text-center text-2xl tmd:ext-5xl mb-8">
         <div className="text-blue-500 italic mb-2">
           Join THOUSANDS Of Satisfied Customers
         </div>
@@ -207,29 +213,35 @@ const Funnel2Optin = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 w-5/6 mx-auto">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 w-5/6 mx-auto">
         <img
           src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team1.png"
+          className="mx-auto"
           alt=""
         />
         <img
           src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team2.png"
+          className="mx-auto"
           alt=""
         />
         <img
           src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team3.png"
+          className="mx-auto"
           alt=""
         />
         <img
           src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team4.png"
+          className="mx-auto"
           alt=""
         />
         <img
           src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team5.png"
+          className="mx-auto"
           alt=""
         />
         <img
           src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team-6.png"
+          className="mx-auto"
           alt=""
         />
       </div>
@@ -249,7 +261,7 @@ const Funnel2Optin = () => {
       <FAQ />
 
       <div className="bg-blue-950 text-center py-6 mt-10">
-        <div className="grid grid-cols-3 w-5/6 mx-auto gap-4 text-white divide-x-2 divide-blue-500">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 w-5/6 mx-auto gap-4 text-white sm:*:divide-x-2 divide-blue-500">
           <div className="px-6">
             <img
               src="https://cffunnelstemplates.com/demo/n-95-mask/assets/icons/icon-12.png"

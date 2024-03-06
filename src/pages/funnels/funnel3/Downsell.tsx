@@ -19,7 +19,7 @@ const Funnel3Downsell = () => {
     <div>
       <Navbar />
       <header className="bg-[url(https://cffunnelstemplates.com/demo/trip-reservation/assets/img/trip-res-banner.jpg)] h-[60vh]">
-        <div className="flex items-center w-full mx-auto h-full text-white text-center">
+        <div className="flex items-center w-full mx-auto h-full text-white text-center px-4">
           <div className="w-full py-6">
             <div className="text-6xl font-semibold mb-4">
               WAIT! ONE LAST OFFER
@@ -69,7 +69,7 @@ const Funnel3Downsell = () => {
         </div>
 
         <div className="text-center mt-8">
-          <div className="text-4xl">
+          <div className="text-2xl md:text-4xl px-4">
             Offer Starting From <span className="line-through">$199</span>{" "}
             <span className="text-orangee">$199</span>
           </div>

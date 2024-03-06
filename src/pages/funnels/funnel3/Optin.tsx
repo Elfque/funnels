@@ -23,7 +23,7 @@ const Funnel3Optin = () => {
 
       {/* header */}
       <header className="bg-[url(https://cffunnelstemplates.com/demo/trip-reservation/assets/img/trip-res-banner.jpg)] h-[90vh]">
-        <div className="flex items-end w-full mx-auto h-full text-white text-center">
+        <div className="flex items-end w-full mx-auto h-full text-white text-center px-4">
           <div className="w-full py-6 bg-black/60">
             <div className="text-6xl font-semibold mb-4">
               Your Awesome Headline Here

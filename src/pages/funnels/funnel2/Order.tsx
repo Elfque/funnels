@@ -24,7 +24,7 @@ const Funnel2Order = () => {
 
       <form
         action=""
-        className="w-[90%] max-w-2xl mx-auto my-20 p-3 bg-gray-200 rounded-lg grid grid-cols-2 gap-2"
+        className="w-[90%] max-w-2xl mx-auto my-20 p-3 bg-gray-200 rounded-lg grid sm:grid-cols-2 gap-2"
       >
         <EditInput name="" label="First Name" />
         <EditInput name="" label="Last Name" />
@@ -96,7 +96,7 @@ const Funnel2Order = () => {
           />
         </div>
 
-        <div className="text-center md:col-span-2">
+        <div className="text-center sm:col-span-2">
           <button className="bg-blue-500 rounded-md text-white font-semibold text-2xl p-3 mt-6">
             Complete Your Order
           </button>

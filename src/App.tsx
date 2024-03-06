@@ -12,12 +12,14 @@ import Funnel3Upsell from "./pages/funnels/funnel3/Upsell";
 import Funnel3Downsell from "./pages/funnels/funnel3/Downsell";
 import Funnel3Order from "./pages/funnels/funnel3/Order";
 import Funnel2Order from "./pages/funnels/funnel2/Order";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="w-screen overflow-x-hidden">
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="funnel1">
             <Route path="optin" element={<Funnel1 />} />
             <Route path="downsell" element={<Downsell />} />

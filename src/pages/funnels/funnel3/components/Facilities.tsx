@@ -8,11 +8,13 @@ const Facilities = () => {
           ut eleifend pellentesque, nibh lacus
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-8 w-5/6 mx-auto text-center">
+
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 w-5/6 mx-auto text-center">
         <div className="bg-white">
           <img
             src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team1.png"
             alt=""
+            className="mx-auto"
           />
           <div className="p-2">
             <div className="text-2xl">Facility Name-1</div>
@@ -27,6 +29,7 @@ const Facilities = () => {
           <img
             src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team2.png"
             alt=""
+            className="mx-auto"
           />
           <div className="p-2">
             <div className="text-2xl">Facility Name-1</div>
@@ -41,6 +44,7 @@ const Facilities = () => {
           <img
             src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team3.png"
             alt=""
+            className="mx-auto"
           />
           <div className="p-2">
             <div className="text-2xl">Facility Name-1</div>
@@ -55,6 +59,7 @@ const Facilities = () => {
           <img
             src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team4.png"
             alt=""
+            className="mx-auto"
           />
           <div className="p-2">
             <div className="text-2xl">Facility Name-1</div>
@@ -69,6 +74,7 @@ const Facilities = () => {
           <img
             src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team5.png"
             alt=""
+            className="mx-auto"
           />
           <div className="p-2">
             <div className="text-2xl">Facility Name-1</div>
@@ -83,6 +89,7 @@ const Facilities = () => {
           <img
             src="https://cffunnelstemplates.com/demo/n-95-mask/assets/images/team-6.png"
             alt=""
+            className="mx-auto"
           />
           <div className="p-2">
             <div className="text-2xl">Facility Name-1</div>

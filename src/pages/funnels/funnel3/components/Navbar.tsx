@@ -20,7 +20,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className="md:hidden" onClick={() => setOpenNavbar(!openNavbar)}>
-          <AiOutlineMenu />
+          <AiOutlineMenu className="text-white text-5xl" />
         </div>
 
         <div
