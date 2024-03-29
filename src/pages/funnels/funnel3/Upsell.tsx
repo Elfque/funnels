@@ -15,6 +15,7 @@ const Funnel3Upsell = () => {
     "Lorem ipsum dolor sit amet consectetur adipisicing.",
     "Lorem ipsum dolor sit amet consectetur.",
   ];
+  
   return (
     <div>
       <Navbar />
