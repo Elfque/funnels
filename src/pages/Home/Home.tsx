@@ -15,27 +15,29 @@ const Home = () => {
   // const [currentTexture, setcurrentTexture] = useState("");
   const [showGenerate, setShowGenerate] = useState(false);
   const [showImage, setShowImage] = useState(false);
-
   const [image, setImage] = useState(null);
+  const [uploadPercent, setUploadPercent] = useState(0);
   const [uploading, setUploading] = useState(false);
+  const [generating3D, setGenerating3D] = useState(false);
 
   const headers = {
     Authorization: "Bearer msy_jVZDOBtDxElCCJ7RKE9q9lZG7MbcsJxQj0iq",
   };
 
   const get3d = (id: string) => {
+    setGenerating3D(true);
     axios
       .get(` https://api.meshy.ai/v1/image-to-3d/${id}`, {
         headers,
       })
       .then(({ data }) => {
-        console.log(data);
-
         if (data.progress !== 100) {
           setTimeout(() => {
             get3d(id);
           }, 4000);
+          setUploadPercent(data.progress);
         } else {
+          setGenerating3D(false);
         }
       });
   };
@@ -44,6 +46,7 @@ const Home = () => {
     setUploading(true);
     FileProcessor(acceptedFiles[0])
       .then(({ secure_url }) => {
+        setImage(secure_url);
         setUploading(false);
         const payload = {
           image_url: secure_url,
@@ -238,7 +241,9 @@ const Home = () => {
         </div>
 
         {/* DROP ZONE */}
-        <div className="bg-black max-w-[22rem] mt-10 relative z-10 p-2 rounded-md">
+        <div
+          className={`bg-black max-w-[22rem] mt-10 relative z-10 p-2 rounded-md`}
+        >
           <div className="flex text-white items-center mb-2 gap-2 text-md">
             <RiArrowLeftDoubleFill /> Generate 3d
           </div>
@@ -260,8 +265,42 @@ const Home = () => {
               </p>
             )}
           </div>
+          {image && (
+            <img src={image} alt="" className="w-full h-40 object-cover mt-6" />
+          )}
         </div>
       </div>
+
+      {/* OVERLAY */}
+      <div className="fixed top-0 left-0 inset-0 bg-black/30" />
+
+      {/* UPLOADING PICTURE */}
+      {uploading && (
+        <div className="flex justify-center items-center h-[100vh] fixed z-20 top-0 left-0 inset-0 text-2xl text-white">
+          <div>Uploading Image</div>
+        </div>
+      )}
+
+      {/* GENERATING 3D */}
+      {generating3D && (
+        <div className="flex justify-center items-center h-[100vh] fixed z-20 top-0 left-0 inset-0 text-center">
+          <div>
+            <div className="mb-2 text-2xl font-semibold text-white">
+              Generating 3D
+            </div>
+            <div className="flex gap-2 items-center">
+              <div className="h-2 w-60 bg-gray-700 overflow-hidden rounded-2xl">
+                <div
+                  className="h-full bg-gray-300"
+                  style={{ width: `${uploadPercent}%` }}
+                />
+              </div>
+
+              <div className="text-white">{uploadPercent}%</div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="fixed top-0 left-0 inset-0 h-[100vh]">
         {/* <Canvas>
